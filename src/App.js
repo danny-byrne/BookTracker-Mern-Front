@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TodoInput from './components/TodoInput';
+import TodoList from './components/TodoList';
+
+const pStyle = {
+  size: "20px",
+  color: "white",
+}
+
+const container = {
+  backgroundColor: "blue",
+  height: '500px',
+  display: "flex",
+  justifyContent: 'center'
+}
+
+const componentStyle = {
+  
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style = {container} className="App">
+      <h1 style = {pStyle}>Hello!</h1>
+      <TodoInput />
+      <TodoList />
     </div>
   );
 }
